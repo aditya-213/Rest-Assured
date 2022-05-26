@@ -14,7 +14,7 @@ import io.restassured.specification.ResponseSpecification;
 //import io.restassured.specification.RequestSpecification;
 import static io.restassured.RestAssured.*;
 
-//import java.util.HashMap;
+import java.util.HashMap;
 
 public class testCases {
 	ResponseSpecification res;
@@ -31,9 +31,13 @@ public class testCases {
 	
 	@Test
 	public void testFetchUser() {
-		ExtentReportManager.test = ExtentReportManager.reports.startTest("getUsers", "Fetch User");
+		
+		ExtentReportManager.test = ExtentReportManager.reports.startTest("testFetchUser", "Fetch User");
 		RestAssured.baseURI = "https://reqres.in/";
-		ExtentReportManager.test.log(LogStatus.PASS, "Configured the base URL", RestAssured.baseURI);
+		ExtentReportManager.test.log(LogStatus.PASS, "Test Case Status", "Passed");
+		ExtentReportManager.test.log(LogStatus.INFO, "Base URI","https://reqres.in");
+		ExtentReportManager.test.log(LogStatus.INFO, "API call","GET");
+		ExtentReportManager.test.log(LogStatus.INFO, "Resource route","api/users?page=2");
 		given().when().get("api/users?page=2").then().statusCode(200);
 	}
 	
@@ -52,8 +56,45 @@ public class testCases {
 	
 	@Test
 	public void testUserDetail() {
+		
+		ExtentReportManager.test = ExtentReportManager.reports.startTest("testUserDetail", "User Details");
+		ExtentReportManager.test.log(LogStatus.PASS, "Test Case Status", "Passed");
+		ExtentReportManager.test.log(LogStatus.INFO, "Base URI","https://reqres.in");
+		ExtentReportManager.test.log(LogStatus.INFO, "API call","GET");
+		ExtentReportManager.test.log(LogStatus.INFO, "Resource route","api/users/2");
+		
 		RestAssured.baseURI = "https://reqres.in/";
 		given().when().get("api/users/2").then().assertThat().body("data.id", IsEqual.equalTo(2));
+	}
+	
+	@Test
+	public void testRegisterUser() {
+		ExtentReportManager.test = ExtentReportManager.reports.startTest("testRegisterUser","Registering the user");
+		ExtentReportManager.test.log(LogStatus.INFO, "Base URI","https://reqres.in");
+		ExtentReportManager.test.log(LogStatus.INFO, "API call","POST");
+		ExtentReportManager.test.log(LogStatus.INFO, "Body passed","email=eve.holt@reqres.in and password=pistol");
+		ExtentReportManager.test.log(LogStatus.INFO, "Resource route","api/register");
+		ExtentReportManager.test.log(LogStatus.INFO, "Value compared","id");
+		
+		RestAssured.baseURI = "https://reqres.in";
+		
+		HashMap<String,String> params = new HashMap<>();
+		params.put("email", "eve.holt@reqres.in");
+		params.put("password", "pistol");
+		
+		given().when().contentType("application/json").body(params).post("api/register").then().assertThat().body("id", IsEqual.equalTo(4));
+	}
+	
+	@Test
+	public void ListSingleUser() {
+		ExtentReportManager.test = ExtentReportManager.reports.startTest("ListSingleUser","Fetching single user details");
+		ExtentReportManager.test.log(LogStatus.INFO, "Base URI","https://reqres.in");
+		ExtentReportManager.test.log(LogStatus.INFO, "API call","GET");
+		ExtentReportManager.test.log(LogStatus.INFO, "Resource route","api/unknown/2");
+		ExtentReportManager.test.log(LogStatus.INFO, "Value compared","data.name and data.id");
+		
+		RestAssured.baseURI = "https://reqres.in";
+		given().when().get("api/unknown/2").then().assertThat().body("data.name", IsEqual.equalTo("fuchsia rose")).body("data.id", IsEqual.equalTo(2));
 	}
 	
 	@AfterClass

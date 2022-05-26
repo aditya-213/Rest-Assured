@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Aditya Kumar Garg\AppData\Local\Temp\testng-eclipse--1072331389\testng-customsuite.xml</span>
+                    <span>C:\Users\Aditya Kumar Garg\AppData\Local\Temp\testng-eclipse-10978673\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -116,7 +116,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="test.SampleProj.testCases" class="method navigator-link" hash-for-method="ListSingleUser">ListSingleUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="test.SampleProj.testCases" class="method navigator-link" hash-for-method="testFetchUser">testFetchUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="test.SampleProj.testCases" class="method navigator-link" hash-for-method="testRegisterUser">testRegisterUser</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -164,9 +174,6 @@ Expected: Aditya
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -175,14 +182,9 @@ Expected: Aditya
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
 	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)
 	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:212)
 	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
 	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
@@ -196,7 +198,7 @@ Expected: Aditya
 	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
 	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)
 	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
-	at test.SampleProj.testCases.testCreateUser(testCases.java:50)
+	at test.SampleProj.testCases.testCreateUser(testCases.java:54)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -236,9 +238,23 @@ Expected: Aditya
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="ListSingleUser">
+                  </a> <!-- ListSingleUser -->
+                  <span class="method-name">ListSingleUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="testFetchUser">
                   </a> <!-- testFetchUser -->
                   <span class="method-name">testFetchUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegisterUser">
+                  </a> <!-- testRegisterUser -->
+                  <span class="method-name">testRegisterUser</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -253,7 +269,7 @@ Expected: Aditya
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Aditya Kumar Garg\AppData\Local\Temp\testng-eclipse--1072331389\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Aditya Kumar Garg\AppData\Local\Temp\testng-eclipse-10978673\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -302,24 +318,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testCreateUser')
 data.setCell(0, 2, 'test.SampleProj.testCases')
-data.setCell(0, 3, 2030);
+data.setCell(0, 3, 1062);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testFetchUser')
+data.setCell(1, 1, 'ListSingleUser')
 data.setCell(1, 2, 'test.SampleProj.testCases')
-data.setCell(1, 3, 248);
+data.setCell(1, 3, 1035);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testUserDetail')
+data.setCell(2, 1, 'testRegisterUser')
 data.setCell(2, 2, 'test.SampleProj.testCases')
-data.setCell(2, 3, 188);
+data.setCell(2, 3, 621);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testUserDetail')
+data.setCell(3, 2, 'test.SampleProj.testCases')
+data.setCell(3, 3, 213);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testFetchUser')
+data.setCell(4, 2, 'test.SampleProj.testCases')
+data.setCell(4, 3, 183);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -351,22 +375,30 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <span class="method-name">ListSingleUser</span>
+                <span class="method-start">551 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testCreateUser</span>
-                <span class="method-start">658 ms</span>
+                <span class="method-start">1587 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testFetchUser</span>
-                <span class="method-start">2691 ms</span>
+                <span class="method-start">2651 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testRegisterUser</span>
+                <span class="method-start">2835 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testUserDetail</span>
-                <span class="method-start">2941 ms</span>
+                <span class="method-start">3456 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">endReport</span>
-                <span class="method-start">3129 ms</span>
+                <span class="method-start">3670 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

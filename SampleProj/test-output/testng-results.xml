@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-26T10:28:40Z" name="Default suite" finished-at="2022-05-26T10:28:43Z" duration-ms="3274">
+  <suite started-at="2022-05-26T11:17:01Z" name="Default suite" finished-at="2022-05-26T11:17:05Z" duration-ms="3796">
     <groups>
     </groups>
-    <test started-at="2022-05-26T10:28:40Z" name="Default test" finished-at="2022-05-26T10:28:43Z" duration-ms="3274">
+    <test started-at="2022-05-26T11:17:01Z" name="Default test" finished-at="2022-05-26T11:17:05Z" duration-ms="3796">
       <class name="test.SampleProj.testCases">
-        <test-method is-config="true" signature="setSpecification()[pri:0, instance:test.SampleProj.testCases@7fcf2fc1]" started-at="2022-05-26T10:28:40Z" name="setSpecification" finished-at="2022-05-26T10:28:40Z" duration-ms="653" status="PASS">
+        <test-method is-config="true" signature="setSpecification()[pri:0, instance:test.SampleProj.testCases@4196c360]" started-at="2022-05-26T11:17:01Z" name="setSpecification" finished-at="2022-05-26T11:17:02Z" duration-ms="547" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setSpecification -->
-        <test-method signature="testCreateUser()[pri:0, instance:test.SampleProj.testCases@7fcf2fc1]" started-at="2022-05-26T10:28:40Z" name="testCreateUser" finished-at="2022-05-26T10:28:42Z" duration-ms="2030" status="FAIL">
+        <test-method signature="ListSingleUser()[pri:0, instance:test.SampleProj.testCases@4196c360]" started-at="2022-05-26T11:17:02Z" name="ListSingleUser" finished-at="2022-05-26T11:17:03Z" duration-ms="1035" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ListSingleUser -->
+        <test-method signature="testCreateUser()[pri:0, instance:test.SampleProj.testCases@4196c360]" started-at="2022-05-26T11:17:03Z" name="testCreateUser" finished-at="2022-05-26T11:17:04Z" duration-ms="1062" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[1 expectation failed.
@@ -38,9 +42,6 @@ at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(Abstrac
 at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
 at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
 at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
 at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -49,14 +50,9 @@ at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
 at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
-at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
 at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
 at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)
 at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
-at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:212)
 at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)
 at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
 at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
@@ -70,7 +66,7 @@ at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
 at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
 at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)
 at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
-at test.SampleProj.testCases.testCreateUser(testCases.java:50)
+at test.SampleProj.testCases.testCreateUser(testCases.java:54)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -102,15 +98,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateUser -->
-        <test-method signature="testFetchUser()[pri:0, instance:test.SampleProj.testCases@7fcf2fc1]" started-at="2022-05-26T10:28:42Z" name="testFetchUser" finished-at="2022-05-26T10:28:43Z" duration-ms="248" status="PASS">
+        <test-method signature="testFetchUser()[pri:0, instance:test.SampleProj.testCases@4196c360]" started-at="2022-05-26T11:17:04Z" name="testFetchUser" finished-at="2022-05-26T11:17:04Z" duration-ms="183" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFetchUser -->
-        <test-method signature="testUserDetail()[pri:0, instance:test.SampleProj.testCases@7fcf2fc1]" started-at="2022-05-26T10:28:43Z" name="testUserDetail" finished-at="2022-05-26T10:28:43Z" duration-ms="188" status="PASS">
+        <test-method signature="testRegisterUser()[pri:0, instance:test.SampleProj.testCases@4196c360]" started-at="2022-05-26T11:17:04Z" name="testRegisterUser" finished-at="2022-05-26T11:17:05Z" duration-ms="621" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterUser -->
+        <test-method signature="testUserDetail()[pri:0, instance:test.SampleProj.testCases@4196c360]" started-at="2022-05-26T11:17:05Z" name="testUserDetail" finished-at="2022-05-26T11:17:05Z" duration-ms="213" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserDetail -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:test.SampleProj.testCases@7fcf2fc1]" started-at="2022-05-26T10:28:43Z" name="endReport" finished-at="2022-05-26T10:28:43Z" duration-ms="138" status="PASS">
+        <test-method is-config="true" signature="endReport()[pri:0, instance:test.SampleProj.testCases@4196c360]" started-at="2022-05-26T11:17:05Z" name="endReport" finished-at="2022-05-26T11:17:05Z" duration-ms="118" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
