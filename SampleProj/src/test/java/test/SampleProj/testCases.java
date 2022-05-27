@@ -29,10 +29,10 @@ public class testCases {
 		
 	}
 	
-	@Test
+	@Test(description = "Fetching user", testName="testFetchUser")
 	public void testFetchUser() {
 		
-		ExtentReportManager.test = ExtentReportManager.reports.startTest("testFetchUser", "Fetch User");
+		ExtentReportManager.test = ExtentReportManager.getTest();
 		RestAssured.baseURI = "https://reqres.in/";
 		ExtentReportManager.test.log(LogStatus.PASS, "Test Case Status", "Passed");
 		ExtentReportManager.test.log(LogStatus.INFO, "Base URI","https://reqres.in");
@@ -54,10 +54,10 @@ public class testCases {
 		given().when().contentType("application/json").post("api/users").then().assertThat().body("name", IsEqual.equalTo("Aditya"));
 	}
 	
-	@Test
+	@Test(description = "Testing User Details", testName="testUserDetail")
 	public void testUserDetail() {
 		
-		ExtentReportManager.test = ExtentReportManager.reports.startTest("testUserDetail", "User Details");
+		ExtentReportManager.test = ExtentReportManager.getTest();
 		ExtentReportManager.test.log(LogStatus.PASS, "Test Case Status", "Passed");
 		ExtentReportManager.test.log(LogStatus.INFO, "Base URI","https://reqres.in");
 		ExtentReportManager.test.log(LogStatus.INFO, "API call","GET");
@@ -67,9 +67,9 @@ public class testCases {
 		given().when().get("api/users/2").then().assertThat().body("data.id", IsEqual.equalTo(2));
 	}
 	
-	@Test
+	@Test(description = "Testing Register User", testName="testRegisterUser")
 	public void testRegisterUser() {
-		ExtentReportManager.test = ExtentReportManager.reports.startTest("testRegisterUser","Registering the user");
+		ExtentReportManager.test = ExtentReportManager.getTest();
 		ExtentReportManager.test.log(LogStatus.INFO, "Base URI","https://reqres.in");
 		ExtentReportManager.test.log(LogStatus.INFO, "API call","POST");
 		ExtentReportManager.test.log(LogStatus.INFO, "Body passed","email=eve.holt@reqres.in and password=pistol");
@@ -85,9 +85,9 @@ public class testCases {
 		given().when().contentType("application/json").body(params).post("api/register").then().assertThat().body("id", IsEqual.equalTo(4));
 	}
 	
-	@Test
+	@Test(description = "Listing Single User", testName="ListSingleUser")
 	public void ListSingleUser() {
-		ExtentReportManager.test = ExtentReportManager.reports.startTest("ListSingleUser","Fetching single user details");
+		ExtentReportManager.test = ExtentReportManager.getTest();
 		ExtentReportManager.test.log(LogStatus.INFO, "Base URI","https://reqres.in");
 		ExtentReportManager.test.log(LogStatus.INFO, "API call","GET");
 		ExtentReportManager.test.log(LogStatus.INFO, "Resource route","api/unknown/2");
